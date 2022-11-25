@@ -31,7 +31,7 @@ namespace Ex06
 
             }
 
-            Console.WriteLine($"\r He trobat la majsucula {frase}");
+            Console.WriteLine($"\r La frase en majuscules es: {frase}");
 
         }
     }
