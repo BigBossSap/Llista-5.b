@@ -21,9 +21,7 @@ namespace Ex03
                 if (lletra == 'A' || lletra == 'E' || lletra == 'I' || lletra == 'O'
                     || lletra == 'U' || lletra == 'a' || lletra == 'e' || lletra == 'i' || lletra == 'o' || lletra == 'u')
                     contVocal++;
-                //else if (lletra != 'A' || lletra != 'E' || lletra != 'I' || lletra != 'O'
-                // || lletra != 'U' || lletra != 'a' || lletra != 'e' || lletra != 'i' || lletra != 'o' || lletra != 'u' || lletra != ' ' || lletra !='.')
-                // contConsonants++;
+              
                 else if (lletra != ' ' && lletra != '.')
                     contConsonants++;
 
