@@ -12,29 +12,32 @@ namespace Ex04.b
       b. Versió 2. Suposeu que pot haver espais al principi, al final, espais dobles, ...  */
 
             char lletra;
-            int cont = 1;
-            
-
-         
-
-            
-
-           
+            int cont = 1;                                        
             Console.WriteLine("Frase, acaba en punt: ");
             lletra = Console.ReadKey().KeyChar;
 
             while (lletra == ' ')
                 lletra = Console.ReadKey().KeyChar;
 
-            while (lletra != '.')
+            do
+
+
+
             {
                 if (lletra == ' ')
+                {
                     cont++;
-                while (lletra== ' ')
+                    lletra = Console.ReadKey().KeyChar;
+                }
+                while (lletra == ' ')
+
                     lletra = Console.ReadKey().KeyChar;
 
                 lletra = Console.ReadKey().KeyChar;
-            }
+            } while (lletra != '.');
+
+            if (lletra == ' ')
+                cont--;
 
 
             Console.WriteLine($"La frase te {cont} paraules.");

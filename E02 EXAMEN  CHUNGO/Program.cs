@@ -24,15 +24,45 @@ namespace E02_EXAMEN__CHUNGO
 
 
             char caracter;
+            int maxLenght = 0, comparador = int.MinValue ;
+            string frase = "";
             Console.WriteLine("Frase: ");
             caracter = Console.ReadKey().KeyChar;
+            
+
 
             while (caracter != '\r')
             {
+                if (caracter <= 'z' && caracter >= 'A')
+                {
+                    frase += caracter;
+                    maxLenght++;
+                    caracter = Console.ReadKey().KeyChar;
+                }
+
+
+
+            if (!(caracter >= 'A' && caracter <= 'z'))
+                    {
+                        frase += caracter;
+                        caracter = Console.ReadKey().KeyChar;
+                    }
+
+            if (maxLenght>comparador)
+                    {
+                        comparador = maxLenght;
+
+            }
+                    
+
+                
+                
+            caracter = Console.ReadKey().KeyChar;
 
 
             }
 
+            Console.WriteLine(comparador);
         }
     }
 }

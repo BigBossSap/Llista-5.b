@@ -5,37 +5,28 @@ namespace Ex05
     internal class Program
     {
         static void Main(string[] args)
+
         {
             /*5. Fer un programa que demani una frase i l’escrigui sense espais múltiples  */
 
 
-            char frase;
-            string completa = "";
+            int con = 0;
+            char lletra;
+            char ant = ' ';
+            string frase ="";
 
-            Console.WriteLine("frase: ");
-            frase = Console.ReadKey().KeyChar;
+            lletra = (char)Console.Read();
 
-            do
+            while (lletra != '.')
             {
-                
-
-
-                if (frase == ' ')
-                {
+                if (lletra >= 'a' && lletra <= 'z')
+                    frase += lletra;
+                else if ((ant >= 'a' && ant <= 'z') && lletra != ' ')
+                    frase += lletra;
                     
+            }
 
-                    while (frase == ' ')
-                    {
-                        frase -= ' ';
-                        frase = Console.ReadKey().KeyChar;
-                    }
-                }
-
-                completa = completa + frase;
-                frase = Console.ReadKey().KeyChar;
-            } while (frase != '.');
-
-            Console.WriteLine(completa);
+            Console.WriteLine(frase);
 
 
 
