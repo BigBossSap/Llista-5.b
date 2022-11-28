@@ -31,7 +31,7 @@ namespace Ex06.b
 
             }
 
-            Console.WriteLine($"\r La frase en majuscules es: {lletra}");
+            Console.WriteLine($"\r La majuscula es: {lletra}");
         }
     }
 }

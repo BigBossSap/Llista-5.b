@@ -19,13 +19,15 @@ namespace Ex01
             while (num!=-1)
             {
 
-                
 
-                if (num==comparador)
+
+                if (num == comparador)
+                
                     semafor = false;
 
+               
                 comparador = num;
-
+                
                 num = Convert.ToInt32(Console.ReadLine());
             }
 
