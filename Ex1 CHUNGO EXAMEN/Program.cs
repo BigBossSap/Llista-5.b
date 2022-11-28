@@ -31,65 +31,43 @@ namespace Ex1_CHUNGO_EXAMEN
     • El promig de les notes, descartant la més alta i les menors de 5.
     • La nota descartada (òbviament la més alta).
     Tingueu en compte que no sabem quantes notes s'han d'entrar a priori.*/
-
-
-
-
             double nota;
             double mediana;
             double cuantos=-1;
             double suma=0;
             double notaMax=0;
             double minim= double.MinValue;
-
             Console.WriteLine("Notes: ");
-            nota = double.Parse(Console.ReadLine());
-
-            
-
+            nota = double.Parse(Console.ReadLine());          
                 while (nota != -1) 
             {
-
-
                 while (nota < 0 || nota > 10)
                 {
-
-
                     Console.WriteLine("Error");
                     nota = double.Parse(Console.ReadLine());
                 }
                 if (nota <5)
                 {
                     nota = 0;
-                    cuantos--;
-                    
+                    cuantos--;                  
                 }
                 if (nota > minim)
                 {
                     minim = nota;
-                    notaMax = nota;
-                    
-
+                    notaMax = nota;                   
                 }               
                 cuantos++;
-                suma = suma + nota;
-                
+                suma = suma + nota;               
                 nota = double.Parse(Console.ReadLine());
-
-
             }
-
-
             if (suma == 0)
                 Console.WriteLine("No hi ha notes per fer la mitjana");
-
             else
             {
                 suma -= notaMax;
                 mediana = suma / cuantos;
                 Console.WriteLine($"La nota mitjana es {Math.Round(mediana, 1)}");
             }
-
         }
     }
 }
